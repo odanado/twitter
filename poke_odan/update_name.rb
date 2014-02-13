@@ -30,10 +30,12 @@ def update_profile(tweet,cmd)
 
     rescue => e
         warn "!!!!error!!!!"
+        warn Time.now
         warn tweet.url
         warn e.class
         warn e.message
         warn e.backtrace
+        warn "\n"
     end
 end
 
@@ -62,8 +64,12 @@ begin
         end
     end
 rescue => e
+    warn "!!!!error!!!!"
+    warn Time.now
+    warn object
     warn e.class
     warn e.message
     warn e.backtrace
+    warn "\n"
 end
 

@@ -64,6 +64,9 @@ def primenumber(tweet)
         $rest_client.update("@#{screen_name} " + tweet_text,:in_reply_to_status_id => reply_id)
 
     rescue => e
+        warn "!!!!error!!!!"
+        warn Time.now
+        warn tweet.url
         warn e.class
         warn e.message
         warn e.backtrace
@@ -101,9 +104,14 @@ begin
         end
     end
 rescue => e
+    warn "!!!!error!!!!"
+    warn Time.now
+    warn object
     warn e.class
     warn e.message
     warn e.backtrace
+    warn "\n"
+
 end
 
 
