@@ -70,5 +70,7 @@ rescue => e
     warn e.message
     warn e.backtrace
     warn "\n"
+    system("./tweet.rb @poke_odan update name 死んだよ." + 
+           Time.now.to_s)
 end
 
