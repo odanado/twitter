@@ -106,7 +106,6 @@ begin
 rescue => e
     warn "!!!!error!!!!"
     warn Time.now
-    warn object
     warn e.class
     warn e.message
     warn e.backtrace
