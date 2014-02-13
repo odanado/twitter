@@ -70,7 +70,7 @@ rescue => e
     warn e.message
     warn e.backtrace
     warn "\n"
-    system("cd ../odanbot && ./tweet.rb @poke_odan update name 死んだよ." + 
-           Time.now.to_s + "&& cd ../poke_odan")
+    system("./tweet.rb @poke_odan update name 死んだよ." + 
+           Time.now.to_s)
 end
 
