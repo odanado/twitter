@@ -49,7 +49,11 @@ def primenumber(tweet)
     elsif n == 1
         tweet_text = "1 は素数ではありません."
     elsif n.to_s.length >= 10
-        tweet_text = "桁数多いつらい."
+        if `./Miller-Rabin.rb #{n}` == "true"
+            tweet_text = "#{n} は確率的素数です."
+        else
+            tweet_text = "#{n} は合成数です."
+        end
     else
         tweet_text = "#{n} は素数です."
         for i in 2..Math.sqrt(n) do
