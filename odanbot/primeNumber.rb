@@ -1,4 +1,4 @@
-#!usr/bin/ruby
+#!/usr/bin/ruby
 # -*- coding: utf-8 -*-
 
 def isPrimeNumber(n)
@@ -26,22 +26,24 @@ def isPrimeNumber(n)
 end
 
 def randomPrimeNumber(len)
+    len = 130 - len
+    warn len
     loop do
         n = ""
-        for i in 1..135-len do
+        for i in 1..len do
             n += rand(9).to_s
         end
-        return n if `Miller-Rabin.rb #{n}` == "true"
+        return n.to_i if `./Miller-Rabin.rb #{n}` == "true"
     end
 end
 
-reply_id = ARGV[0]
+reply_from = ARGV[0]
 cmd = ARGV[1]
 n = ARGV[2]
 
 
-if n == nil
-    print randomPrimeNumber(reply_id.length)
+if n.to_i <= 0
+    print randomPrimeNumber(reply_from.length)
 else
     print isPrimeNumber(n.to_i)
 end

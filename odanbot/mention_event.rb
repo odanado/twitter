@@ -41,10 +41,11 @@ def primenumber(tweet)
     screen_name = tweet.url.to_str.split("/")[3]
     reply_id = tweet.url.to_str.split("/")[5]
 
+    reply_from = tweet.text.split(" ")[0]
     cmd = tweet.text.split(" ")[1]
     n = tweet.text.split(" ")[2].to_i
 
-    tweet_text = `./primeNumber.rb #{reply_id} #{cmd} #{n}`
+    tweet_text = `./primeNumber.rb #{reply_from} #{cmd} #{n}`
 
 
     begin
@@ -78,6 +79,7 @@ def event(tweet,client)
     end
 
 end
+`./primeNumber.rb @odanbot primenumber 107`
 
 begin
     $streaming_client.user do |object|
