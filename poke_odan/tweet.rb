@@ -5,6 +5,7 @@ require 'twitter'
 
 load "./twitter_config.rb"
 
+
 if ARGV.empty?
     puts "usage: #{$0} <tweet text> ..."
     exit
