@@ -1,2 +1,4 @@
 *.log
 twitter_config.rb
+/odan_hoge/*
+/pokemon

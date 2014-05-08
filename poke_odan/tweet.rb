@@ -5,6 +5,7 @@ require 'twitter'
 
 load File.expand_path(File.dirname($0))+"/twitter_config.rb"
 
+
 if ARGV.empty?
     puts "usage: #{$0} <tweet text> ..."
     exit
