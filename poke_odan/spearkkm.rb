@@ -10,7 +10,7 @@ user_data = $rest_client.user("spearkkm")
 text = Time.now.to_s + ","
 text += user_data.name + ","
 text += user_data.description + ","
-text += user_data.location
+text += user_data.location + "<br>"
 
 puts text
 
